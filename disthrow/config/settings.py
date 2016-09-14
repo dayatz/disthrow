@@ -82,8 +82,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'disthrow',
+        'USER': 'disthrow',
+        'PASSWORD': 'disthrow',
+        'HOST': 'localhost'
     }
 }
 
@@ -126,7 +129,7 @@ USE_TZ = True
 
 STATIC_URL = '/s/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static') 
+    os.path.join(BASE_DIR, 'static')
 ]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/m/'
